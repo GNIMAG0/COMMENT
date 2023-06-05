@@ -1,0 +1,170 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-username {
+  font-weight: bold;
+  font-size: small;
+}
+.post-content {
+font-size: x-large;
+font-weight: bold;
+}
+.comment-section {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.comment-section h3 {
+  margin-top: 0;
+}
+
+.comment-section #comments {
+  margin-bottom: 10px;
+}
+
+.comment-section .comment-input {
+  margin-bottom: 0;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-picture {
+  margin-right: 10px;
+}
+
+.user-picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-content .display-name {
+  font-weight:lighter;
+  font-size: x-small;
+  margin-bottom: 5px;
+}
+
+.comment-content .comment-text {
+  margin-top: 5px;
+  font-size: large;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.fixed-top {
+  position: sticky;
+  top: 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  z-index: 1;
+}
+
+.fixed-bottom {
+  position: sticky;
+  bottom: 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  z-index: 1;
+}
+
+.comment-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.comment-input .input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.comment-input input[type="text"],
+.comment-input textarea {
+ 
+  margin-right: 10px;
+}
+
+.comment-input button {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 0;
+}
+
+/* Media Query for small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .comment-input {
+    align-items: stretch;
+    margin-bottom: 0;
+  }
+
+  .comment-input .input-group {
+    flex-direction: column;
+  }
+
+  .comment-input input[type="text"],
+  .comment-input textarea {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
